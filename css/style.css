@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    line-height: 2;
+}
+
+.header {
+
+    height: 95vh;
+    background-image:linear-gradient(to bottom right, rgba(255, 255, 255, 0.801), rgba(0, 0, 0, 0.178) ) , 
+    url("../img/Cake\ 2.jpeg");
+    background-position: center;
+    background-size: cover;
+}
+
+.text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -35%);
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+}
+
+.text-box h1 {
+    text-transform: uppercase;
+    color: rgb(101, 19, 87);
+    text-shadow: 0 0 3px black, 0 0 5px black;
+}
+
+.heading-main {
+    display: block;
+    font-size: 5rem;
+    letter-spacing: 1.1rem;
+    animation-name: moveINleft;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes moveINleft {
+    0% {
+        transform: translateX(-1000px)
+    }
+
+    80% {
+        transform: translateX(50px);
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.heading-sub {
+    display: block;
+    font-size: 1.6rem;
+    letter-spacing: 1.2rem;
+    animation-name: moveINright;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes moveINright {
+    0% {
+        transform: translateX(1000px)
+    }
+
+    80% {
+        transform: translateX(-50px);
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.btn-container {
+    text-align: center;
+}
+
+.btn {
+    font-size: 3rem;
+    color: white;
+    display: inline-block;
+    border-bottom: 0.2rem solid black;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-top: 1rem;
+    padding: 1rem;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    box-shadow: 0 1rem 2rem #000;
+    background-color: rgba(58, 50, 101, 0.507);
+    transform: translateY(-5px);
+}
+
+.btn:active {
+    box-shadow: 0 0.5rem 1rem #000;
+    transform: translateY(5px);
+}
+
+.main {
+    height: 1200px;
+    background-color: rgb(54, 170, 164);
+    text-align: center;
+    margin-top: -5rem;
+    padding-top: 5rem;
+    clip-path: polygon(50% 5%, 100% 0, 100% 43%, 100% 76%, 65% 96%, 0 100%, 0% 43%, 0 0);
+}
+
+.main h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: white;
+    text-shadow: 0 0 3px black, 0 0 5px black;
+}
+
+.gallery {
+    width: 75%;
+    margin: 0 auto;
+    height: 100%;
+    position: relative;
+}
+
+.gallery_photo {
+    width: 400px;
+    position: absolute;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.527); 
+    outline-offset: 1rem;
+    transition: all 0.3s;
+    z-index: 10;
+}
+.gallery_photo:hover {
+    outline: 1.8rem solid rgba(255, 196, 255, 0.432);
+    transform: scale(1.1);
+    z-index: 30;
+}
+
+.gallery_photo-1 {
+    width: 350px;
+    left: 25%;
+    top: 15%;
+}
+
+
+.gallery_photo-2 {
+    top: 45%;
+}
+
+.gallery_photo-3{
+    width: 500px;
+    left: 30%;
+    top: 30%;
+}
+
+
+.footer {
+    height: 200px;
+    text-align: center;
+    color: rgb(250, 104, 218);
+    font-size: 2rem;
+    padding: 2rem;
+}
+
+.footer ul li {
+    display: inline-block;
+    margin: 1rem;
+}
+
+.footer ul li a {
+    text-decoration: none;
+    color: rgb(250, 104, 218);
+}
+
+.footer ul li:hover, .footer ul li a:hover {
+    color: rgb(255, 0, 200);
+    transform: scale(1.2);
+}
